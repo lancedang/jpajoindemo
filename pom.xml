@@ -6,7 +6,11 @@
 
     <groupId>com.dangdang.springboot</groupId>
     <artifactId>jpajoindemo</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>bookjoindemo</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -40,6 +44,13 @@
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
         <!-- spring boot 自动配置需要的包 -->
 <!--        <dependency>
             <groupId>org.springframework.boot</groupId>
