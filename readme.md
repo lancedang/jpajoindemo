@@ -20,3 +20,4 @@
 ##### 后期任务
 - 去掉数据库 foreign 尝试
 - 顺带插入 book_detail 要了解
+- CascadeType.ALL 
