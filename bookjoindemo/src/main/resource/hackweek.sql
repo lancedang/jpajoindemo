@@ -1,22 +1,6 @@
-/*
-Navicat MySQL Data Transfer
-
-Source Server         : localhost
-Source Server Version : 50716
-Source Host           : localhost:3306
-Source Database       : hackweek
-
-Target Server Type    : MYSQL
-Target Server Version : 50716
-File Encoding         : 65001
-
-Date: 2018-03-17 21:06:45
-*/
-
-SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for book
+-- 2.1 一对一案例：book表
 -- ----------------------------
 DROP TABLE IF EXISTS `book`;
 CREATE TABLE `book` (
@@ -29,7 +13,7 @@ CREATE TABLE `book` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='用于 table join 的案例表';
 
 -- ----------------------------
--- Table structure for book_detail
+-- 2.2 一对一案例：book_detail表
 -- ----------------------------
 DROP TABLE IF EXISTS `book_detail`;
 CREATE TABLE `book_detail` (

@@ -1,7 +1,5 @@
 package demo;
 
-import demo.properties.CarProperty;
-import demo.properties.UserProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
