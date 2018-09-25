@@ -33,6 +33,15 @@ public class SinglePersonTest {
         singlePersonService.addPerson(p3);
     }
 
+    //确定条件查询
+    @Test
+    public void testFindPerson() {
+        String name = "zhangsan";
+        List<SinglePersonEntity> persons = singlePersonService.findPersonByName(name);
+        Assert.assertEquals(2, persons.size());
+    }
+
+    //不确定条件查询
     @Test
     public void testFindPersonByCondition() {
         //构造查询参数

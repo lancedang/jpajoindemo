@@ -29,6 +29,10 @@ public class SinglePersonService {
         return singlePersonRepository.save(entity);
     }
 
+    public List<SinglePersonEntity> findPersonByName(String name) {
+        return singlePersonRepository.findOneByName(name);
+    }
+
     //单表不确定条件查询
     public List<SinglePersonEntity> findPersonByCondition(PersonQuery personQuery) {
 
