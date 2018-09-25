@@ -1,18 +1,21 @@
-package com.dangdang.springboot.entity;
+package com.dangdang.springboot.entity.one2one;
 
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.persistence.criteria.CriteriaBuilder;
 
 @Data
 @Entity
-@Table(name = "book")
+@Table(name = "book", schema = "jpa")
 public class Book {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Integer id;
 
+    @Column(name = "name")
     private String name;
 
     //JoinColumn 表明Book 是主表, book table 包含外键

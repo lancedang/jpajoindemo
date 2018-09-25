@@ -1,14 +1,13 @@
 package com.dangdang.springboot;
 
-import com.dangdang.springboot.dao.BookRepository;
-import com.dangdang.springboot.entity.Book;
-import com.dangdang.springboot.entity.BookDetail;
+import com.dangdang.springboot.dao.one2one.BookRepository;
+import com.dangdang.springboot.entity.one2one.Book;
+import com.dangdang.springboot.entity.one2one.BookDetail;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import sun.tools.jar.CommandLine;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +17,7 @@ import java.util.List;
  */
 @Slf4j
 @SpringBootApplication
-public class App implements CommandLineRunner {
+public class App {
 
     @Autowired
     BookRepository bookRepository;
@@ -27,8 +26,8 @@ public class App implements CommandLineRunner {
         SpringApplication.run(App.class, args);
     }
 
-    @Override
-    public void run(String... args) throws Exception {
+    //@Override
+    public void run2(String... args) throws Exception {
         List<Book> books = new ArrayList<>();
 
         books.add(new Book("A", new BookDetail(10)));
